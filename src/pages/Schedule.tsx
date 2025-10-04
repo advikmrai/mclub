@@ -14,15 +14,6 @@ const Schedule = () => {
             </div>
           </div>
         </div>
-        
-        {/* Bottom right text box */}
-        {/* <div className="absolute bottom-4 right-4 max-w-xs">
-          <div className="bg-muted/50 p-4 rounded border-2 border-[hsl(var(--gold-400))]">
-            <p className="text-sm text-muted-foreground">
-              Schedule and weekly problems.
-            </p>
-          </div>
-        </div> */}
       </div>
       <BottomNavigation />
     </div>
