@@ -87,7 +87,7 @@ const Index = () => {
           <div className="absolute left-8 top-1/2 transform -translate-y-1/2 z-20">
             <h2 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold text-yellow">
               {currentText}
-              <span className="animate-pulse">|</span>
+              <span className="animate-blink-full">|</span> {/* <--- CHANGE IS HERE */}
             </h2>
           </div>
           

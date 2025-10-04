@@ -133,3 +133,16 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes custom-blink {
+  0%, 100% {
+    opacity: 1; /* Fully visible */
+  }
+  50% {
+    opacity: 0.4; /* Fully transparent */
+  }
+}
+
+.animate-blink-full {
+  animation: custom-blink 1s infinite step-end; /* 1s cycle, infinite, step-end for sharp on/off */
+}
