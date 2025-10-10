@@ -13,18 +13,14 @@ const Schedule = () => {
   const isDefaultView = currentView === 'default';
   const isContentSelected = currentView !== 'default';
 
-  // FIX: We now explicitly define alignment for the two states.
-  // The outer container (flex flex-col items-center justify-center) handles vertical centering.
-  // This class controls the width and the *horizontal* position on large screens (lg).
   const menuClass = isContentSelected 
-    ? "lg:w-1/3 w-full lg:items-start transition-all duration-500" // Shrunk to 1/3, aligns content horizontally to the start (left)
-    : "lg:w-full w-full transition-all duration-500"; // Full width, keeps default horizontal centering
+    ? "lg:w-1/3 w-full lg:items-start transition-all duration-500" 
+    : "lg:w-full w-full transition-all duration-500"; 
   
   const contentPanelClass = isContentSelected 
-    ? "lg:w-2/3 w-full opacity-100 translate-x-0" 
+    ? "lg:w-4/5 w-full opacity-100 translate-x-0" 
     : "lg:w-0 w-full opacity-0 translate-x-full lg:translate-x-0 pointer-events-none";
 
-  // The inner div must be set to text-left when content is selected for the links to align properly.
   const menuAlignment = isDefaultView ? "text-center" : "text-left";
 
 
@@ -66,21 +62,18 @@ const Schedule = () => {
     <div className="min-h-screen p-8 bg-background relative">
       <div className="h-[calc(100vh-4rem)] border-4 border-primary relative rounded-xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
         
-        {/* Menu Area (Left/Center) - Always vertically centered due to 'justify-center' */}
         <div className={`flex flex-col p-6 items-center justify-center ${menuClass}`}> 
           <div className={`space-y-8 ${menuAlignment} w-full max-w-xs`}> 
             <h1 className={`text-4xl font-extrabold text-foreground transition-all duration-500 ${isDefaultView ? 'text-5xl' : 'text-3xl'}`}>
-              Resources
+              Math Team Resources
             </h1>
             <div className="space-y-4">
-              {/* Calendar Link */}
               <button
                 onClick={() => setCurrentView('calendar')}
                 className="block text-2xl font-semibold text-primary hover:text-primary-darker hover:underline cursor-pointer transition-colors duration-200 focus:outline-none"
               >
                 Calendar
               </button>
-              {/* Problem Set Link */}
               <button
                 onClick={() => setCurrentView('problemSet')}
                 className="block text-2xl font-semibold text-primary hover:text-primary-darker hover:underline cursor-pointer transition-colors duration-200 focus:outline-none"
@@ -93,7 +86,6 @@ const Schedule = () => {
           </div>
         </div>
 
-        {/* Dynamic Content Panel (Right Side) */}
         <div className={`h-full bg-gray-50 border-t-4 lg:border-t-0 lg:border-l-4 border-primary transition-all duration-500 ease-in-out overflow-hidden flex-shrink-0 ${contentPanelClass}`}>
           {renderContentPanel()}
         </div>
