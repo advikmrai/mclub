@@ -4,7 +4,7 @@ import { BottomNavigation } from "../components/ui/bottom-navigation"; // Using 
 type ScheduleView = 'default' | 'problemSet' | 'calendar';
 
 const CALENDAR_IMAGE_URL = "https://i.ibb.co/whdxK9L3/IMG-1264.webp";
-const NOTION_EMBED = `<iframe src="https://brawny-doll-a95.notion.site/ebd/18e678ad888a80b08261d6796e0e028f?v=18e678ad888a809eb72d000c1a4b1b08" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>`;
+const NOTION_EMBED = `<iframe src="https://paagalpan.notion.site/ebd/288c478bf14381c0ad4dfa3a292b3e0d?v=288c478bf1438117b621000cd8afd5c0" width="100%" height="100%" frameborder="0" allowfullscreen />`;
 
 
 const Schedule = () => {
