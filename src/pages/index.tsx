@@ -2,12 +2,15 @@ import { BottomNavigation } from "../components/ui/bottom-navigation"; // Change
 import { useState, useEffect } from "react";
 
 const IMAGE_SOURCES = [
-  "https://i.ibb.co/zWS2MDS5/image0.jpg",
-  "https://i.ibb.co/GfPcQKWV/image2.jpg",
-  "https://i.ibb.co/WpsHcK3G/image5.jpg",
-  "https://i.ibb.co/p6KJCP4H/image1.jpg",
-  "https://i.ibb.co/DPrRndsY/image4.jpg",
-  "https://i.ibb.co/zWN412hr/image7.jpg"
+  "https://i.ibb.co/zWS2MDS5/image0.jpg", // clark & anna @board
+  "https://i.ibb.co/WpsHcK3G/image5.jpg", // monotonic increasing function
+  "https://i.ibb.co/JWfrY9zf/image2.jpg", // rhhsmath.work.gd
+  "https://i.ibb.co/m5j1q3N6/image3.jpg", // subat waves hi
+  "https://i.ibb.co/p6KJCP4H/image1.jpg", // usamo index
+  "https://i.ibb.co/DPrRndsY/image4.jpg", // dotted lines
+  "https://i.ibb.co/GfPcQKWV/image2.jpg", // z^k/k
+  "https://i.ibb.co/zWN412hr/image7.jpg", // young's inequality
+  "https://i.ibb.co/ynf7NZn2/image9.jpg", // \sixseven
 ];
 
 const Index = () => {
@@ -94,7 +97,6 @@ const Index = () => {
           {/* Central area - currently empty, but here for structure */}
           <div className="w-full h-full flex items-center justify-center">
             <div className="text-center">
-              {/* Main central content area */}
             </div>
           </div>
           
@@ -102,7 +104,7 @@ const Index = () => {
           <div className="absolute bottom-4 right-4 max-w-xs z-20">
             <div className="bg-white/70 backdrop-blur-sm p-4 rounded-lg border-2 border-[hsl(var(--blue-400))] shadow-lg">
               <p className="text-sm text-gray-800 font-medium">
-                The RHHS Math Club is where fun goes to thrive. Room 254, Ms. De la Mar. 
+                The RHHS Math Club is where fun goes to thrive. Room 256, Ms. De la Mar. 
               </p>
             </div>
           </div>

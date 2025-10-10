@@ -17,7 +17,6 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        {/* Use the conditional basename here */}
         <BrowserRouter basename={appBase}> 
           <Routes>
             <Route path="/" element={<Index />} />
