@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { BottomNavigation } from "../components/ui/bottom-navigation"; // Using relative path as alias failed
 
+import calendar from "@/assets/images/calendar.webp";
+
 type ScheduleView = 'default' | 'problemSet' | 'calendar';
 
-const CALENDAR_IMAGE_URL = "https://i.ibb.co/whdxK9L3/IMG-1264.webp";
+const CALENDAR_IMAGE_URL = calendar;
 const NOTION_EMBED = `<iframe src="https://paagalpan.notion.site/ebd/288c478bf14381c0ad4dfa3a292b3e0d?v=288c478bf1438117b621000cd8afd5c0" width="100%" height="100%" frameborder="0" allowfullscreen />`;
 
 
