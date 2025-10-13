@@ -1,16 +1,24 @@
 import { BottomNavigation } from "../components/ui/bottom-navigation"; 
 import { useState, useEffect } from "react";
 
+import image0 from "@/assets/images/clarkyanna.jpeg"; // "clark & anna @board"
+import image5 from "@/assets/images/writing.jpeg";    //  "monotonic increasing function" (Guess based on common math image types)
+import image2 from "@/assets/images/workgd.jpeg";     // "rhhsmath.work.gd"
+import image9 from "@/assets/images/sixseven.jpeg";    // Original: "sixseven"
+import image3 from "@/assets/images/subatwave.jpeg";   // Original: "subat waves hi"
+import image1 from "@/assets/images/usamoindex.jpeg";  // Original: "usamo index"
+import image4 from "@/assets/images/dieplines.jpeg";   // Original: "dotted lines"
+import image7 from "@/assets/images/zkk.jpeg";         // Original: "young's inequality"
+
 const IMAGE_SOURCES = [
-  "https://i.ibb.co/zWS2MDS5/image0.jpg", // clark & anna @board
-  "https://i.ibb.co/WpsHcK3G/image5.jpg", // monotonic increasing function
-  "https://i.ibb.co/JWfrY9zf/image2.jpg", // rhhsmath.work.gd
-  "https://i.ibb.co/ynf7NZn2/image9.jpg", // \sixseven
-  "https://i.ibb.co/m5j1q3N6/image3.jpg", // subat waves hi
-  "https://i.ibb.co/p6KJCP4H/image1.jpg", // usamo index
-  "https://i.ibb.co/DPrRndsY/image4.jpg", // dotted lines
-  "https://i.ibb.co/GfPcQKWV/image2.jpg", // z^k/k
-  "https://i.ibb.co/zWN412hr/image7.jpg", // young's inequality
+  { url: image0, alt: "clark & anna @board" },
+  { url: image5, alt: "monotonic increasing function" },
+  { url: image2, alt: "rhhsmath.work.gd" },
+  { url: image9, alt: "sixseven" },
+  { url: image3, alt: "subat waves hi" },
+  { url: image1, alt: "usamo index" },
+  { url: image4, alt: "dotted lines" },
+  { url: image7, alt: "young's inequality" },
 ];
 
 const Index = () => {
@@ -57,11 +65,11 @@ const Index = () => {
     <div className="min-h-screen p-8 bg-background relative">
       <div className="h-[calc(100vh-4rem)] border-4 border-primary relative rounded-xl overflow-hidden">
         <div className="absolute inset-0">
-          {IMAGE_SOURCES.map((src, index) => (
+          {IMAGE_SOURCES.map((source, index) => (
             <img
               key={index}
-              src={src}
-              alt={`Math Club Visual ${index + 1}`}
+              src={source.url} 
+              alt={source.alt} 
               className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
                 index === currentImageIndex ? "opacity-50" : "opacity-0" 
               }`}

@@ -18,7 +18,7 @@ const Schedule = () => {
     : "lg:w-full w-full transition-all duration-500"; 
   
   const contentPanelClass = isContentSelected 
-    ? "lg:w-4/5 w-full opacity-100 translate-x-0" 
+    ? "lg:w-3/4 w-full opacity-100 translate-x-0" 
     : "lg:w-0 w-full opacity-0 translate-x-full lg:translate-x-0 pointer-events-none";
 
   const menuAlignment = isDefaultView ? "text-center" : "text-left";
